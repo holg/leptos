@@ -158,6 +158,7 @@ pub mod component;
 mod for_loop;
 mod hydration_scripts;
 mod show;
+pub mod text_prop;
 pub use for_loop::*;
 pub use hydration_scripts::*;
 pub use leptos_macro::*;
@@ -175,10 +176,12 @@ mod into_view;
 pub use into_view::IntoView;
 pub use leptos_dom;
 pub use tachys;
-
+pub mod logging;
 mod mount;
 pub use any_spawner::Executor;
 pub use mount::*;
+pub use oco;
+
 /*mod additional_attributes;
 pub use additional_attributes::*;
 mod await_;
@@ -205,10 +208,6 @@ pub use leptos_dom::{
     CollectView, Errors, Fragment, HtmlElement, IntoAttribute, IntoClass,
     IntoProperty, IntoStyle, IntoView, NodeRef, Property, View,
 };
-/// Utilities for simple isomorphic logging to the console or terminal.
-pub mod logging {
-    pub use leptos_dom::{debug_warn, error, log, warn};
-}
 
 /// Types to make it easier to handle errors in your application.
 pub mod error {
