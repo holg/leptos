@@ -8,7 +8,7 @@ codegen-units = 1
 lto = true
 
 [dependencies]
-leptos = { path = "../../leptos", features = ["csr", "nightly", "tracing"] }
+leptos = { path = "../../leptos", features = ["csr", "tracing"] } # add "nightly" back after ICE is fixed
 reqwasm = "0.5"
 gloo-timers = { version = "0.3", features = ["futures"] }
 serde = { version = "1", features = ["derive"] }
